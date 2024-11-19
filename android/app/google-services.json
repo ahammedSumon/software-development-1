@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "437221217623",
+    "project_id": "queens-af906",
+    "storage_bucket": "queens-af906.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437221217623:android:8f9f3327fde8ca63ca1a12",
+        "android_client_info": {
+          "package_name": "com.example.flutter_appliction_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9G-LGtg5vhvkG5hpUTY_5AJoCXWPHyrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
