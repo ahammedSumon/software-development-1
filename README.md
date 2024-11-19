@@ -77,8 +77,7 @@ The **Doctor Appointment Booking App** is a comprehensive solution built with **
 
 The app follows the **MVVM** architecture to separate concerns and improve maintainability.
 
-
-
+```
 lib/
 ├── models/                       # Data models
 │   ├── booking_model/            # Models related to booking system
@@ -125,9 +124,8 @@ lib/
 ├── main.dart                     # Main entry point for the application
 └── routes.dart                   # Route configuration for navigation
            
+```
 
-
----
 
 ## ⚙️ **Installation**  
 
@@ -141,7 +139,7 @@ lib/
 1. **Clone the Repository:**  
    Open a terminal and run:
    ```bash
-    git clone [https://github.com/your-username/doctor-appointment-app.git](https://github.com/ahammedSumon/software-development-1)
+    git clone (https://github.com/ahammedSumon/software-development-1)
 
 
 
@@ -182,22 +180,27 @@ Book Tests: Schedule medical tests with detailed descriptions and prices.
 
 🖼️ Screenshots
 Screen	Description
-	Login Screen: Secure OTP-based authentication.
+
+Login Screen: Secure OTP-based authentication.
+
  [iPhone 16 Pro - 1](https://github.com/user-attachments/assets/a6b3d428-892c-475d-b368-55c970658825)
 
 Registration: register to  schedule a visit.
+
  ![iPhone 16 Pro - 2](https://github.com/user-attachments/assets/bdb7341b-ed33-4b5a-bfaf-6dc122891ce6)
 
 Home page: Explore hospital labs and tests.
+
  ![iPhone 16 Pro - 4](https://github.com/user-attachments/assets/7498f1b6-b2a6-4548-810a-87323e21844d)
 
 
 Bookings Section: Manage your bookings easily.
+
  ![iPhone 16 Pro - 5](https://github.com/user-attachments/assets/1d2aa027-61d3-48b5-bc80-d5bf4aec60bd)
 
 🚧 Roadmap
 
-   use the latest gradle and firebase.
+   use the latest gradle and Firebase.
 
 🔗 Useful Links
 
