@@ -1,170 +1,210 @@
-🏥 Doctor Appointment Booking App
+# 🏥 **Doctor Appointment Booking App**  
+**A comprehensive appointment management solution for Queens Hospital Pvt Ltd.**  
 
-A comprehensive appointment management solution for Queens Hospital Pvt Ltd Jashore.
-You can book appointments and direct schedule lab tests. You can see the details of the doctors and also communicate with them by phone.
+![Flutter](https://img.shields.io/badge/Flutter-Framework-blue?logo=flutter)  
+![Firebase](https://img.shields.io/badge/Backend-Firebase-orange?logo=firebase)  
+![License: MIT](https://img.shields.io/badge/License-MIT-green)  
+![Version](https://img.shields.io/badge/Version-1.0.0-blue)  
+![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green)
 
-A supportive and comprehensive ui design to make users interact with the app easily.
-It has Firebase support as the backend where the admin can see the user list and the appointment booking list of the users.  
+---
+
+## 📖 **Table of Contents**
+1. [📋 About the App](#about-the-app)  
+2. [✨ Features](#features)  
+3. [🛠️ Tech Stack](#tech-stack)  
+4. [📂 Project Architecture](#project-architecture)  
+5. [⚙️ Installation](#installation)  
+6. [🚀 Usage](#usage)  
+7. [🖼️ Screenshots](#screenshots)  
+8. [🚧 Roadmap](#roadmap)  
+9. [🔗 Useful Links](#useful-links)  
+10. [🤝 Contributing](#contributing)  
+11. [🔒 License](#license)  
+12. [🎉 Acknowledgments](#acknowledgments)
+
+---
+
+## 📋 **About the App**  
+
+The **Doctor Appointment Booking App** is a comprehensive solution built with **Flutter** and backed by **Firebase**. It is designed for **Queens Hospital Pvt Ltd** to offer patients an efficient and user-friendly platform for managing appointments, viewing lab services, and customizing their personal profiles.
+
+### Key Highlights:
+- **OTP-based Authentication**: Quick and secure registration and login.
+- **Appointment Booking**: Patients can easily browse doctor profiles, book appointments, and reschedule or cancel them.
+- **Lab Service Integration**: Users can view and book lab services for various medical tests.
+- **Profile Management**: A personalized profile section to edit details and upload photos.
+
+---
+
+## ✨ **Features**  
+
+### 🌟 **User Management**
+- **🔐 OTP-based Authentication**: Secure authentication using **Firebase Authentication** with OTP verification for both registration and login.
+- **👤 Profile Customization**: Users can change their names and profile photos anytime within the app.
+
+### 🩺 **Doctor Appointments**
+- **👨‍⚕️ Browse Doctors**: A categorized list of doctors available based on their specialization and expertise.
+- **📅 Schedule Appointments**: Users can book appointments with available doctors by selecting a time slot and confirming the booking.
+- **🔄 Reschedule or Cancel**: Modify existing appointments based on user convenience.
+
+### 🧪 **Lab Services**
+- **🏥 Explore Labs**: Displays a list of available hospitals and labs, along with the tests they offer.
+- **🧑‍🔬 Test Information**: Detailed description of the medical tests, including pricing, duration, and results timeline.
+
+### 📱 **Additional Features**
+- **Intuitive UI/UX**: Designed to be user-friendly and easy to navigate.
+- **Real-time Data Sync**: Using **Firebase Firestore**, all data is kept in sync across the app.
+- **Cross-platform**: Available for both **Android** and **iOS** devices.
+
+---
+
+## 🛠️ **Tech Stack**  
+
+| **Component**        | **Technology**     |  
+|----------------------|--------------------|  
+| **Frontend**          | Flutter            |  
+| **Backend**           | Firebase           |  
+| **State Management**  | Provider/Bloc      |  
+| **Database**          | Firebase Firestore |  
+| **Authentication**    | Firebase Auth      |  
+| **Cloud Storage**     | Firebase Storage   |  
+| **Push Notifications**| Firebase Cloud Messaging |  
+
+---
+
+## 📂 **Project Architecture**  
+
+The app follows the **MVVM** architecture to separate concerns and improve maintainability.
 
 
 
-
-
-📖 Table of Contents
-
-    📋 About the App
-    ✨ Features
-    🛠️ Tech Stack
-    📂 Project Architecture
-    ⚙️ Installation
-    🚀 Usage
-    🖼️ Screenshots
-    🚧 Roadmap
-    🔗 Useful Links
-    🤝 Contributing
-    🔒 License
-    🎉 Acknowledgments
-
-📋 About the App
-
-The Doctor Appointment Booking App is a Flutter-based mobile application designed for Queens Hospital Pvt Ltd Jashore. The app provides patients with a streamlined experience for managing their healthcare needs, such as booking doctor appointments, exploring lab services, and customizing their profiles.
-✨ Features
-🌟 User Management
-
-    🔒 OTP-based Authentication: Fast and secure login/registration using Firebase.
-    👤 Profile Management: Easily update profile photos and names.
-    👤 Save the user info and appointment details of the user
-
-🩺 Doctor Appointments
-
-    📑 Doctor Directory: Browse through a categorized list of doctors by specialty.
-    📅 Appointment Scheduling: Book appointments with a few taps.
-    🔄 Modify Appointments: Reschedule or cancel appointments conveniently.
-    🔄 Can also delete the appointment.
-    
-
-🧪 Lab Services
-
-    🏥 Explore Labs: View all labs in Queens Hospital.
-    📜 Detailed Test Information: Learn about the tests provided by each lab.
-    🔄 Can book the lab test and time trough the app.
-
-📱 App Highlights
-
-    User-friendly UI/UX.
-    Real-time updates and synchronization using Firebase.
-    Optimized for Android and iOS platforms.
-
-🛠️ Tech Stack
-Component	Technology
-Frontend	Flutter
-Backend	Firebase
-State Management	Provider/Bloc
-Database	Firebase Firestore
-📂 Project Architecture
-
-The project follows the MVVM (Model-View-ViewModel) architecture, ensuring scalability and maintainability.
-
-    Model: Handles data and business logic.
-    View: Manages UI rendering.
-    ViewModel: Acts as a bridge between the UI and business logic.
-
-lib/  
-├── model/                  # Core app utilities and constants  
-│   ├── booking_model/         # App-wide constants (e.g., colors, styles, dimensions)  
-│   ├── cartModal/          # General services (e.g., Firebase, local storage)  
-│   ├── labModal/             # Utility functions and helpers  
-│   └── user_model/           # Shared/reusable widgets  
+lib/
+├── models/                       # Data models
+│   ├── booking_model/            # Models related to booking system
+│   ├── cart_model/               # Models for cart management
+│   ├── lab_model/                # Models for lab details
+│   └── user_model/               # Models for user information
 │
-├── provider/              # Feature-specific modules  
-│   ├── cart_provider/
-     ├── auth_provider/
-│   │   ├── models/        # Auth-specific data models   
-│   │   └── viewmodels/    # State management for authentication  
+├── providers/                    # State management using providers
+│   ├── cart_provider/            # Provider for cart operations
+│   ├── auth_provider/            # Provider for authentication
+│   ├── lab_provider/             # Provider for lab services
+│   └── appointment_provider/     # Provider for appointments
+│
+├── services/                     # Firebase and API integration
+│   ├── firebase_service.dart     # Firebase configuration and helpers
+│   └── api_service.dart          # API calls and network utilities
+│
+├── views/                        # UI Components
+│   ├── screens/                  # Main screens
+│   │   ├── admin_screen/         # Admin-specific screens
+│   │   ├── all_labs/             # Display labs and their tests
+│   │   ├── appointment_screen/   # Appointment booking and management
+│   │   ├── booking/              # Booking-related screens
+│   │   ├── edit_profile/         # User profile editing
+│   │   ├── welcome_screen/       # Welcome/introductory screens
+│   │   ├── test_details/         # Detailed test information
+│   │   └── dashboard/            # Main dashboard for users
 │   │
-│   ├── screens/      # Appointment management module  
-│   │   ├── admin screen/        # Appointment data models  
-│   │   ├── all labs/  
-|	|── services/
-|	|── appointment_screen/
-| 	|── booking/
-|  	|── edit profile/
-├	|── welcome screen/        # Appointment data models  
-│   │   ├── test details/ # Appointment-related screens  
-│   │   └── view models/    # Logic for booking, rescheduling, and deleting appointments  
+│   ├── widgets/                  # Reusable widgets
+│   │   ├── custom_button.dart    # Custom button widget
+│   │   ├── lab_card.dart         # Widget for displaying lab cards
+│   │   └── offers_card.dart      # Widget for displaying offers
 │   │
-│   ├── utils/              # Lab services module  
-│   │   ├── utils/        # Data models for labs and tests  
-│   │   ├── views/         # Screens for displaying lab details  
-│   │     
-│   │
-│   └── widgets/           # User profile module  
-│       ├── custom_button/        # User profile data  
-│       ├── labCard/         # Profile editing screens  
-│       └── offersCard/    # Profile update logic  
-│── firebase Options
-├── main.dart              # App entry point  
-└── routes.dart            # Centralized app routing  
+│   └── dialogs/                  # Reusable dialog components
+│       ├── confirmation_dialog.dart
+│       └── error_dialog.dart
+│
+├── utils/                        # Utility functions and constants
+│   ├── constants.dart            # App-wide constants
+│   ├── helpers.dart              # Helper functions
+│   └── validators.dart           # Form validation utilities
+│
+├── firebase_options.dart         # Firebase configuration options
+├── main.dart                     # Main entry point for the application
+└── routes.dart                   # Route configuration for navigation
+           
 
-⚙️ Installation
-Prerequisites
 
-    Install Flutter SDK.
-    Set up Firebase (Guide).
-    Install Android Studio or VS Code.
+---
 
-Steps to Install
+## ⚙️ **Installation**  
 
-    Clone the Repository:
+### **Prerequisites**  
+1. Install the [Flutter SDK](https://flutter.dev/docs/get-started/install).
+2. Set up Firebase for your app by following the [Firebase Flutter Setup](https://firebase.google.com/docs/flutter/setup).
+3. Make sure Android Studio or VS Code is installed on your system.
 
-git clone [https://github.com/your-username/doctor-appointment-app.git](https://github.com/ahammedSumon/software-development-1)
-cd doctor-appointment-app
+### **Steps to Install**  
+
+1. **Clone the Repository:**  
+   Open a terminal and run:
+   ```bash
+    git clone [https://github.com/your-username/doctor-appointment-app.git](https://github.com/ahammedSumon/software-development-1)
+
+
+
 
 Install Dependencies:
 
-flutter pub get
+	flutter pub get
 
 Configure Firebase:
 
     Add google-services.json (Android) and GoogleService-Info.plist (iOS).
 
 Run the Application:
-
-    flutter run
+    
+view > command palette > launch emulator
+run > run without debugging
 
 🚀 Usage
 
-    Authentication:
-        Register or log in with OTP verification.
-        Set up your profile by adding your name and photo.
+   🚀 Usage
+User Registration & Authentication
 
-    Explore Features:
-        Browse doctors and labs.
-        Book, reschedule, or delete appointments.
+Login/Sign Up: Use OTP authentication to sign up or log into the app.
+Profile Setup: Users can add their details, including their photo and name.
 
-    Profile Customization:
-        Update your name and profile photo anytime.
+Booking Appointments
+
+Browse Doctors: Users can explore doctors by specialty.
+Schedule Appointments: Book a time slot for your consultation.
+Modify Appointments: Easily reschedule or cancel appointments if needed.
+
+Labs and Tests
+
+View Labs: Explore the various labs at Queens Hospital.
+Book Tests: Schedule medical tests with detailed descriptions and prices.
+
+
 
 🖼️ Screenshots
 Screen	Description
 	Login Screen: Secure OTP-based authentication.
-	Doctor Directory: Browse doctors by specialty.
-	Book Appointment: Select a doctor and schedule a visit.
-	Lab Services: Explore hospital labs and tests.
-	Profile Section: Manage your details easily.
+ [iPhone 16 Pro - 1](https://github.com/user-attachments/assets/a6b3d428-892c-475d-b368-55c970658825)
+
+Registration: register to  schedule a visit.
+ ![iPhone 16 Pro - 2](https://github.com/user-attachments/assets/bdb7341b-ed33-4b5a-bfaf-6dc122891ce6)
+
+Home page: Explore hospital labs and tests.
+ ![iPhone 16 Pro - 4](https://github.com/user-attachments/assets/7498f1b6-b2a6-4548-810a-87323e21844d)
+
+
+Bookings Section: Manage your bookings easily.
+ ![iPhone 16 Pro - 5](https://github.com/user-attachments/assets/1d2aa027-61d3-48b5-bc80-d5bf4aec60bd)
+
 🚧 Roadmap
 
-    v1.1.0
-        Implement push notifications for upcoming appointments.
-        Add dark mode support.
-    v1.2.0
-        Integrate in-app payment for premium services.
-        Add multi-language support.
+   use the latest gradle and firebase.
 
 🔗 Useful Links
 
    [ [Flutter Documentation](https://docs.flutter.dev/)](https://docs.flutter.dev/)
+   
    [ Firebase Setup for Flutter](https://firebase.google.com/docs/flutter/setup)
+   
    [ Queens Hospital Official Website](https://queenshospital.com.bd/)
 
 🤝 Contributing
@@ -172,24 +212,26 @@ Screen	Description
 We welcome contributions to improve this project!
 Steps to Contribute:
 
-    [Fork the repository.](https://github.com/ahammedSumon/software-development-1/)
-    Create a feature branch:
+[Fork the repository.]
 
-git checkout -b feature-name
+    (https://github.com/ahammedSumon/software-development-1/)
+Create a feature branch:
+
+	git checkout -b feature-name
 
 Commit your changes:
 
-git commit -m "Add feature description"
+	git commit -m "Add feature description"
 
 Push the branch:
 
     git push origin feature-name
 
-    Submit a pull request.
+Submit a pull request.
 
 🔒 License
 
 🎉 Acknowledgments
 
-    Queens Hospital Pvt Ltd for supporting this project.
-    The Flutter and Firebase teams for robust tools and documentation.
+Queens Hospital Pvt Ltd for supporting this project.
+ The Flutter and Firebase teams for robust tools and documentation.
